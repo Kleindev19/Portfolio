@@ -1,24 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
-export const THEME_KEY = "portfolio-theme";
-
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
-    setTheme(document.documentElement.classList.contains("dark") ? "dark" : "light");
-  }, []);
+  const [theme, setTheme] = useState(() =>
+    document.documentElement.classList.contains("dark") ? "dark" : "light"
+  );
 
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
     document.documentElement.classList.toggle("dark", next === "dark");
-    try {
-      localStorage.setItem(THEME_KEY, next);
-    } catch {
-      /* storage unavailable — theme still applies for this visit */
-    }
+    document.documentElement.style.colorScheme = next;
   };
 
   const label = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
