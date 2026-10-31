@@ -60,6 +60,7 @@
 
 /* DARK THEME */
 .dark {
+  color-scheme: dark;
   --background: 240 10% 4%;
   --foreground: 0 0% 94%;
 

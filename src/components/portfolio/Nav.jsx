@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { NAV_LINKS, PROFILE } from "@/lib/portfolio-data";
 import { cn } from "@/lib/utils";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -52,7 +51,6 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-2.5">
-          <ThemeToggle />
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}

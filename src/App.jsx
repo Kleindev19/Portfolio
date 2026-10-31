@@ -1,6 +1,4 @@
 
-import { useState } from "react";
-
 import About from "./components/portfolio/About.jsx";
 import Certifications from "./components/portfolio/Certifications.jsx";
 import Contact from "./components/portfolio/Contact.jsx";
@@ -13,16 +11,9 @@ import Projects from "./components/portfolio/Projects.jsx";
 import Skills from "./components/portfolio/Skills.jsx";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
-
   return (
-    <div className="portfolio-shell" data-theme={theme}>
-      <Nav
-        theme={theme}
-        onToggleTheme={() =>
-          setTheme(theme === "dark" ? "light" : "dark")
-        }
-      />
+    <div className="portfolio-shell">
+      <Nav />
 
       <main>
         <Hero />
