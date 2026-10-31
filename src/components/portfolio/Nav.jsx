@@ -24,7 +24,7 @@ export default function Nav() {
           : "border-b border-transparent"
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-10">
         <a href="#top" className="group flex items-center gap-3" aria-label="Back to top">
           <span className="h-1.5 w-1.5 rounded-full bg-primary transition-transform duration-300 group-hover:scale-150" />
           <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-foreground/75 transition-colors group-hover:text-foreground">
@@ -32,7 +32,7 @@ export default function Nav() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Sections">
+        <nav className="hidden items-center gap-5 xl:flex 2xl:gap-7" aria-label="Sections">
           {NAV_LINKS.map((link) => (
             <a
               key={link.id}
@@ -44,7 +44,7 @@ export default function Nav() {
           ))}
           <a
             href="#contact"
-            className="group inline-flex items-center gap-1.5 border border-primary/50 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-primary transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+            className="group inline-flex items-center gap-1.5 border border-primary/50 px-3 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-primary transition-colors duration-300 hover:bg-primary hover:text-primary-foreground 2xl:px-4 2xl:text-[11px]"
           >
             Let&apos;s connect
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -58,7 +58,7 @@ export default function Nav() {
             onClick={() => setOpen((value) => !value)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="flex h-9 w-9 items-center justify-center border border-border text-foreground transition-colors hover:border-primary hover:text-primary md:hidden"
+            className="flex h-9 w-9 shrink-0 items-center justify-center border border-border text-foreground transition-colors hover:border-primary hover:text-primary xl:hidden"
           >
             {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
@@ -66,7 +66,7 @@ export default function Nav() {
       </div>
 
       {open ? (
-        <nav className="border-t border-border px-6 pb-6 pt-3 md:hidden" aria-label="Sections">
+        <nav className="border-t border-border px-4 pb-6 pt-3 sm:px-6 xl:hidden" aria-label="Sections">
           {NAV_LINKS.map((link) => (
             <a
               key={link.id}

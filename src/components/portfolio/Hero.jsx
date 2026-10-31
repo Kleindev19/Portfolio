@@ -31,7 +31,7 @@ export default function Hero() {
         MARVIN
       </span>
 
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:px-10 lg:pb-28">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 sm:gap-14 sm:px-6 sm:pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-8 lg:pb-24 xl:gap-16 xl:px-10 xl:pb-28">
         <div>
           <Reveal>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground sm:text-[11px]">
@@ -104,7 +104,7 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={200} className="relative">
+        <Reveal delay={200} className="relative mx-auto w-full max-w-md lg:max-w-none">
           <ProfilePortrait />
         </Reveal>
       </div>

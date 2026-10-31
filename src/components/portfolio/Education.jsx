@@ -5,11 +5,11 @@ import SectionHeading from "./SectionHeading";
 
 export default function Education() {
   return (
-    <section id="education" className="border-t border-border py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="education" className="border-t border-border py-16 sm:py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <SectionHeading index="04" label="Education" title="Where the fundamentals come from." />
 
-        <div className="mt-14 grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="mt-10 grid gap-10 sm:mt-14 sm:gap-12 lg:grid-cols-12 lg:gap-12 xl:gap-16">
           <div className="lg:col-span-7">
             <Reveal className="relative border-l border-border pl-6 md:pl-8">
               <span className="absolute -left-[5px] top-1 h-2.5 w-2.5 rounded-full bg-primary" />

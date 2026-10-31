@@ -21,9 +21,12 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label={label}
       title={label}
-      className="flex h-9 w-9 items-center justify-center border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+      className="flex h-9 shrink-0 items-center justify-center gap-1.5 border border-border px-2 text-muted-foreground transition-colors hover:border-primary hover:text-primary sm:w-9 sm:px-0"
     >
       {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+      <span className="font-mono text-[9px] uppercase tracking-wider sm:hidden">
+        {theme === "dark" ? "Day" : "Night"}
+      </span>
     </button>
   );
 }

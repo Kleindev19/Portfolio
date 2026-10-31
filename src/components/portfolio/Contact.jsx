@@ -16,15 +16,15 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden border-t border-border py-24 md:py-32"
+      className="relative overflow-hidden border-t border-border py-16 sm:py-20 lg:py-32"
     >
       <div
         aria-hidden
         className="glow-lime pointer-events-none absolute -bottom-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div className="grid min-w-0 gap-10 sm:gap-14 lg:grid-cols-12 lg:gap-12 xl:gap-16">
           <div className="lg:col-span-5">
             <SectionHeading
               index="07"
@@ -36,11 +36,11 @@ export default function Contact() {
             <Reveal delay={100} className="mt-10 space-y-3">
               <a
                 href={`mailto:${PROFILE.email}`}
-                className="group flex items-center justify-between border border-border px-5 py-4 transition-colors hover:border-primary/50"
+                className="group flex min-w-0 items-center justify-between gap-3 border border-border px-3 py-4 transition-colors hover:border-primary/50 sm:px-5"
               >
                 <span className="flex items-center gap-3">
                   <Mail className="h-4 w-4 text-primary" aria-hidden />
-                  <span className="text-sm text-foreground">
+                  <span className="break-all text-xs text-foreground sm:text-sm">
                     {PROFILE.email}
                   </span>
                 </span>
@@ -51,7 +51,7 @@ export default function Contact() {
                 href={PROFILE.linkedin}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="group flex items-center justify-between border border-border px-5 py-4 transition-colors hover:border-primary/50"
+                className="group flex items-center justify-between gap-3 border border-border px-3 py-4 transition-colors hover:border-primary/50 sm:px-5"
               >
                 <span className="flex items-center gap-3">
                   <BriefcaseBusiness
@@ -69,7 +69,7 @@ export default function Contact() {
                 href={PROFILE.github}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="group flex items-center justify-between border border-border px-5 py-4 transition-colors hover:border-primary/50"
+                className="group flex items-center justify-between gap-3 border border-border px-3 py-4 transition-colors hover:border-primary/50 sm:px-5"
               >
                 <span className="flex items-center gap-3">
                   <Code2 className="h-4 w-4 text-primary" aria-hidden />

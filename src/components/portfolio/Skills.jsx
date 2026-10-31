@@ -13,8 +13,8 @@ const ICONS = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="border-t border-border py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="skills" className="border-t border-border py-16 sm:py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <SectionHeading
           index="02"
           label="Technical Stack"
@@ -22,7 +22,7 @@ export default function Skills() {
           description="Every category below is something I've used in a real project — not a list of things I've only read about."
         />
 
-        <div className="mt-16 grid gap-x-12 gap-y-10 md:grid-cols-2">
+        <div className="mt-10 grid gap-x-8 gap-y-8 sm:mt-14 md:grid-cols-2 lg:gap-x-12 lg:gap-y-10">
           {SKILL_GROUPS.map((group, i) => {
             const Icon = ICONS[group.key];
             return (

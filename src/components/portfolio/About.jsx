@@ -6,9 +6,9 @@ import { MapPin } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="border-t border-border py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+    <section id="about" className="border-t border-border py-16 sm:py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div className="grid min-w-0 gap-10 sm:gap-14 lg:grid-cols-12 lg:gap-12 xl:gap-16">
           <div className="lg:col-span-5">
             <SectionHeading
               index="01"

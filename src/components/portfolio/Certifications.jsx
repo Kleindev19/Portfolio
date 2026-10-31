@@ -14,8 +14,8 @@ export default function Certifications() {
   };
 
   return (
-    <section id="credentials" className="border-t border-border py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="credentials" className="border-t border-border py-16 sm:py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <SectionHeading
           index="05"
           label="Certifications"
@@ -23,7 +23,7 @@ export default function Certifications() {
           description="Each entry is verifiable through its issuing organisation."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-2">
           {CERTIFICATIONS.map((cert, i) => (
             <Reveal key={cert.name} delay={i * 80}>
               <article className="group relative h-full overflow-hidden border border-border bg-foreground/[0.03] p-7 transition-colors duration-500 hover:border-primary/40 md:p-8">
