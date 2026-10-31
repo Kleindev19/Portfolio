@@ -4,8 +4,8 @@
 // ---------------------------------------------------------------------------
 
 export const PROFILE = {
-  name: "Marvin Klein Ortega",
-  shortName: "Marvin",
+  name: "Marvhenne Klein Ortega",
+  shortName: "Klein",
   mark: "M. Klein Ortega",
   role: "Aspiring Full-Stack Web Developer",
   headline: "Building Digital Experiences Through Code.",
@@ -152,7 +152,7 @@ export const CERTIFICATIONS = [
     name: "Linux Essentials",
     issuer: "Cisco Networking Academy",
     issued: "Issue date placeholder", // replace with your actual issue date
-    credentialUrl: "", // placeholder — paste your Credly / certificate link
+    credentialUrl: "https://www.credly.com/badges/1867d511-cb56-4ed7-b9b0-9684b4d642cb", // placeholder — paste your Credly / certificate link
     skills: ["Linux CLI", "File Systems", "Permissions", "Shell Basics"],
   },
 ];
