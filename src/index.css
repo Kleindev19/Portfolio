@@ -1,0 +1,178 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT THEME */
+:root {
+  --background: 0 0% 98%;
+  --foreground: 240 10% 5%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 5%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 5%;
+
+  --primary: 82 75% 42%;
+  --primary-foreground: 240 10% 5%;
+
+  --secondary: 240 5% 92%;
+  --secondary-foreground: 240 10% 10%;
+
+  --muted: 240 5% 92%;
+  --muted-foreground: 240 4% 42%;
+
+  --accent: 82 75% 92%;
+  --accent-foreground: 240 10% 5%;
+
+  --destructive: 0 72% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 240 5% 86%;
+  --input: 240 5% 86%;
+  --ring: 82 75% 42%;
+
+  --radius: 0.5rem;
+
+  --chart-1: 82 75% 42%;
+  --chart-2: 190 70% 40%;
+  --chart-3: 220 65% 50%;
+  --chart-4: 35 85% 55%;
+  --chart-5: 280 60% 55%;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 10% 5%;
+  --sidebar-primary: 82 75% 42%;
+  --sidebar-primary-foreground: 240 10% 5%;
+  --sidebar-accent: 82 75% 92%;
+  --sidebar-accent-foreground: 240 10% 5%;
+  --sidebar-border: 240 5% 86%;
+  --sidebar-ring: 82 75% 42%;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* DARK THEME */
+.dark {
+  --background: 240 10% 4%;
+  --foreground: 0 0% 94%;
+
+  --card: 240 8% 7%;
+  --card-foreground: 0 0% 94%;
+
+  --popover: 240 8% 7%;
+  --popover-foreground: 0 0% 94%;
+
+  --primary: 82 85% 66%;
+  --primary-foreground: 240 10% 5%;
+
+  --secondary: 240 6% 12%;
+  --secondary-foreground: 0 0% 90%;
+
+  --muted: 240 6% 12%;
+  --muted-foreground: 240 5% 60%;
+
+  --accent: 82 85% 15%;
+  --accent-foreground: 82 85% 75%;
+
+  --destructive: 0 62% 40%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 240 5% 16%;
+  --input: 240 5% 16%;
+  --ring: 82 85% 66%;
+
+  --chart-1: 82 85% 66%;
+  --chart-2: 190 70% 55%;
+  --chart-3: 220 75% 65%;
+  --chart-4: 35 85% 65%;
+  --chart-5: 280 65% 70%;
+
+  --sidebar-background: 240 10% 4%;
+  --sidebar-foreground: 0 0% 94%;
+  --sidebar-primary: 82 85% 66%;
+  --sidebar-primary-foreground: 240 10% 5%;
+  --sidebar-accent: 82 85% 15%;
+  --sidebar-accent-foreground: 82 85% 75%;
+  --sidebar-border: 240 5% 16%;
+  --sidebar-ring: 82 85% 66%;
+}
+
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: #171b11;
+  background: #c5f277;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px hsl(var(--foreground) / 0.14);
+}
+
+.glow-lime {
+  background: radial-gradient(circle, hsl(var(--primary) / 0.13), transparent 68%);
+  filter: blur(26px);
+}
+
+.glow-deep {
+  background: radial-gradient(circle, hsl(263 70% 22% / 0.16), transparent 70%);
+  filter: blur(30px);
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(to right, hsl(var(--border) / 0.24) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.24) 1px, transparent 1px);
+  background-size: 180px 180px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
