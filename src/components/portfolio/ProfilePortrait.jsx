@@ -10,7 +10,7 @@ export default function ProfilePortrait() {
           <img
             src={profilePortrait}
             alt={`Portrait of ${PROFILE.name}`}
-            className="h-full w-full object-cover object-center grayscale"
+            className="h-full w-full object-cover object-center grayscale-[65%] contrast-[1.05] brightness-[1.08]"
             fetchPriority="high"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-background/10" />
