@@ -147,28 +147,6 @@
     background-image: radial-gradient(circle, rgba(5, 44, 46, 0.9), transparent 70%);
   }
 
-  .skill-track {
-    animation: skill-drift 46s linear infinite;
-  }
-
-  .skill-track:hover {
-    animation-play-state: paused;
-  }
-}
-
-@keyframes skill-drift {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-@media (max-width: 767px) {
-  .skill-track {
-    animation-duration: 90s;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -183,10 +161,4 @@
     transition-duration: 0.001ms !important;
   }
 
-}
-
-@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
-  .skill-track {
-    animation: skill-drift 90s linear infinite !important;
-  }
 }
