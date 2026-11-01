@@ -1,181 +1,183 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* LIGHT THEME */
-:root {
-  color-scheme: light;
-  --background: 0 0% 98%;
-  --foreground: 240 10% 5%;
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: 45 18% 97%;
+    --foreground: 240 8% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 8% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 8% 9%;
+    --primary: 78 88% 26%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 12% 93%;
+    --secondary-foreground: 240 8% 12%;
+    --muted: 45 12% 94%;
+    --muted-foreground: 240 5% 38%;
+    --accent: 78 88% 26%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 87%;
+    --input: 240 6% 84%;
+    --ring: 78 88% 26%;
+    --radius: 0.125rem;
 
-  --card: 0 0% 100%;
-  --card-foreground: 240 10% 5%;
+    --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 5%;
+    --chart-1: 78 88% 32%;
+    --chart-2: 168 60% 32%;
+    --chart-3: 197 37% 38%;
+    --chart-4: 43 74% 44%;
+    --chart-5: 27 87% 50%;
 
-  --primary: 82 75% 42%;
-  --primary-foreground: 240 10% 5%;
+    --sidebar-background: 45 18% 98%;
+    --sidebar-foreground: 240 8% 9%;
+    --sidebar-primary: 78 88% 26%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 12% 93%;
+    --sidebar-accent-foreground: 240 8% 12%;
+    --sidebar-border: 240 6% 87%;
+    --sidebar-ring: 78 88% 26%;
+  }
 
-  --secondary: 240 5% 92%;
-  --secondary-foreground: 240 10% 10%;
+  .dark {
+    color-scheme: dark;
+    --background: 240 5% 4.1%;
+    --foreground: 210 20% 97.6%;
+    --card: 240 6% 6.3%;
+    --card-foreground: 210 20% 97.6%;
+    --popover: 240 6% 6.3%;
+    --popover-foreground: 210 20% 97.6%;
+    --primary: 72 100% 50%;
+    --primary-foreground: 240 6% 5%;
+    --secondary: 240 4% 11%;
+    --secondary-foreground: 210 20% 97.6%;
+    --muted: 240 4% 9%;
+    --muted-foreground: 220 6% 63%;
+    --accent: 72 100% 50%;
+    --accent-foreground: 240 6% 5%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 14%;
+    --input: 240 6% 16%;
+    --ring: 72 100% 50%;
 
-  --muted: 240 5% 92%;
-  --muted-foreground: 240 4% 42%;
+    --chart-1: 72 100% 50%;
+    --chart-2: 168 60% 40%;
+    --chart-3: 197 37% 44%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
 
-  --accent: 82 75% 92%;
-  --accent-foreground: 240 10% 5%;
+    --sidebar-background: 240 5% 5%;
+    --sidebar-foreground: 210 20% 97.6%;
+    --sidebar-primary: 72 100% 50%;
+    --sidebar-primary-foreground: 240 6% 5%;
+    --sidebar-accent: 240 4% 11%;
+    --sidebar-accent-foreground: 210 20% 97.6%;
+    --sidebar-border: 240 6% 14%;
+    --sidebar-ring: 72 100% 50%;
+  }
 
-  --destructive: 0 72% 50%;
-  --destructive-foreground: 0 0% 100%;
+  * {
+    @apply border-border;
+  }
 
-  --border: 240 5% 86%;
-  --input: 240 5% 86%;
-  --ring: 82 75% 42%;
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
 
-  --radius: 0.5rem;
+  body {
+    @apply bg-background font-body text-foreground antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
 
-  --chart-1: 82 75% 42%;
-  --chart-2: 190 70% 40%;
-  --chart-3: 220 65% 50%;
-  --chart-4: 35 85% 55%;
-  --chart-5: 280 60% 55%;
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
 
-  --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 10% 5%;
-  --sidebar-primary: 82 75% 42%;
-  --sidebar-primary-foreground: 240 10% 5%;
-  --sidebar-accent: 82 75% 92%;
-  --sidebar-accent-foreground: 240 10% 5%;
-  --sidebar-border: 240 5% 86%;
-  --sidebar-ring: 82 75% 42%;
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
 
-  --font-heading: "Space Grotesk", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 3px;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
 }
 
-/* DARK THEME */
-.dark {
-  color-scheme: dark;
-  color-scheme: dark;
-  --background: 240 10% 4%;
-  --foreground: 0 0% 94%;
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px hsl(var(--foreground) / 0.13);
+    color: transparent;
+  }
 
-  --card: 240 8% 7%;
-  --card-foreground: 0 0% 94%;
+  .grid-lines {
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--foreground) / 0.045) 1px,
+      transparent 1px
+    );
+    background-size: 25% 100%;
+  }
 
-  --popover: 240 8% 7%;
-  --popover-foreground: 0 0% 94%;
+  .glow-lime {
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.18), transparent 62%);
+  }
 
-  --primary: 82 85% 66%;
-  --primary-foreground: 240 10% 5%;
+  .glow-deep {
+    background-image: radial-gradient(circle, hsl(186 70% 55% / 0.16), transparent 70%);
+  }
 
-  --secondary: 240 6% 12%;
-  --secondary-foreground: 0 0% 90%;
+  .dark .glow-deep {
+    background-image: radial-gradient(circle, rgba(5, 44, 46, 0.9), transparent 70%);
+  }
 
-  --muted: 240 6% 12%;
-  --muted-foreground: 240 5% 60%;
+  .skill-plane {
+    transform: none;
+  }
 
-  --accent: 82 85% 15%;
-  --accent-foreground: 82 85% 75%;
+  .skill-track {
+    animation: skill-drift 46s linear infinite;
+  }
 
-  --destructive: 0 62% 40%;
-  --destructive-foreground: 0 0% 98%;
-
-  --border: 240 5% 16%;
-  --input: 240 5% 16%;
-  --ring: 82 85% 66%;
-
-  --chart-1: 82 85% 66%;
-  --chart-2: 190 70% 55%;
-  --chart-3: 220 75% 65%;
-  --chart-4: 35 85% 65%;
-  --chart-5: 280 65% 70%;
-
-  --sidebar-background: 240 10% 4%;
-  --sidebar-foreground: 0 0% 94%;
-  --sidebar-primary: 82 85% 66%;
-  --sidebar-primary-foreground: 240 10% 5%;
-  --sidebar-accent: 82 85% 15%;
-  --sidebar-accent-foreground: 82 85% 75%;
-  --sidebar-border: 240 5% 16%;
-  --sidebar-ring: 82 85% 66%;
+  .skill-track:hover {
+    animation-play-state: paused;
+  }
 }
 
-/* GLOBAL STYLES */
-* {
-  box-sizing: border-box;
+@keyframes skill-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-family: var(--font-body);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-optical-sizing: auto;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-::selection {
-  color: #171b11;
-  background: #c5f277;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.text-stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px hsl(var(--foreground) / 0.14);
-}
-
-.glow-lime {
-  background: radial-gradient(circle, hsl(var(--primary) / 0.13), transparent 68%);
-  filter: blur(26px);
-}
-
-.glow-deep {
-  background: radial-gradient(circle, hsl(263 70% 22% / 0.16), transparent 70%);
-  filter: blur(30px);
-}
-
-.grid-lines {
-  background-image:
-    linear-gradient(to right, hsl(var(--border) / 0.24) 1px, transparent 1px),
-    linear-gradient(to bottom, hsl(var(--border) / 0.24) 1px, transparent 1px);
-  background-size: 180px 180px;
-  mask-image: linear-gradient(to bottom, black, transparent 88%);
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }

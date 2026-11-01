@@ -59,7 +59,7 @@ export default function Footer() {
             aria-hidden
             className="select-none whitespace-nowrap font-heading text-[clamp(1.4rem,6.4vw,5.5rem)] font-bold leading-[0.9] tracking-[-0.05em] text-foreground/[0.07]"
           >
-            MARVIN KLEIN ORTEGA
+            MARVHENNE KLEIN ORTEGA
           </p>
         </div>
       </div>
