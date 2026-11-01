@@ -147,10 +147,6 @@
     background-image: radial-gradient(circle, rgba(5, 44, 46, 0.9), transparent 70%);
   }
 
-  .skill-plane {
-    transform: none;
-  }
-
   .skill-track {
     animation: skill-drift 46s linear infinite;
   }
@@ -166,6 +162,12 @@
   }
   to {
     transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .skill-track {
+    animation-duration: 72s;
   }
 }
 
