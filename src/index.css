@@ -186,17 +186,7 @@
 }
 
 @media (max-width: 767px) and (prefers-reduced-motion: reduce) {
-  .skill-carousel-viewport {
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-x: contain;
-  }
-
   .skill-track {
-    animation: none !important;
-  }
-
-  .skill-track > [aria-hidden="true"] {
-    display: none;
+    animation: skill-drift 120s linear infinite !important;
   }
 }
