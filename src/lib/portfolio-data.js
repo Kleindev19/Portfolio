@@ -3,6 +3,9 @@
 // Placeholders are marked: swap in your real URLs / details when you have them.
 // ---------------------------------------------------------------------------
 
+import gradingImage from "../assets/grading.jpg";
+import gabayImage from "../assets/gabay.jpg";
+
 export const PROFILE = {
   name: "Marvhenne Klein Ortega",
   shortName: "Klein",
@@ -103,7 +106,8 @@ export const PROJECTS = [
     tagline: "Academic records, handled properly",
     description:
       "A full-stack academic grading platform for faculty and administrators. It centralises student records, grade encoding and weighted grade computation so results are consistent, traceable and quick to release.",
-    image: "https://media.base44.com/images/public/6ae5d5d4ee229b89b280af93/3fc08a176_generated_6caaaeb0.png",
+    image: gradingImage,
+    imagePosition: "left",
     stack: ["Laravel", "Vue.js", "MySQL", "REST API"],
     features: [
       "Student, class and subject records in one place",
@@ -116,10 +120,29 @@ export const PROJECTS = [
   },
   {
     index: "02",
-    name: "AI-Powered Exam Reviewer",
-    tagline: "Lecture notes into practice tests",
+    name: "Gabay-Mental",
+    tagline: "A little support, one mood check-in at a time",
     description:
-      "A web application concept that turns lecture material into interactive reviewers. Uploaded notes are summarised into question sets with instant scoring, so students can revise with active recall instead of re-reading.",
+      "A mental wellness app where users can choose an AI companion role, check in with their mood, and receive supportive messages based on how they feel. It also tracks mood history and provides emergency hotline information for reaching professional help.",
+    image: gabayImage,
+    imagePosition: "top",
+    stack: ["React", "JavaScript", "API"],
+    features: [
+      "Choose the AI companion role you want to talk to",
+      "Automated mood check-ins with personalized AI quotes and messages",
+      "Mood statistics with dates to help track emotional patterns",
+      "Emergency hotline details and information for contacting experts",
+    ],
+    demoUrl: "", // placeholder
+    repoUrl: "", // placeholder
+  },
+  {
+    index: "03",
+    name: "AI-Powered Exam Reviewer",
+    status: "In Development",
+    tagline: "In development — lecture notes into practice tests",
+    description:
+      "An AI-powered exam reviewer currently in development. It is being built to turn uploaded lecture notes into interactive question sets with instant scoring, helping students revise through active recall.",
     image: "https://media.base44.com/images/public/6ae5d5d4ee229b89b280af93/f3968eff8_generated_d5c08220.png",
     stack: ["Vue.js", "Laravel", "MySQL", "AI API"],
     features: [

@@ -51,7 +51,10 @@ function ProjectCard({ project, flip, delay }) {
                 src={project.image}
                 alt={`${project.name} preview`}
                 className={cn(
-                  "aspect-[3/2] w-full object-cover grayscale transition-all duration-[900ms] ease-out group-hover:grayscale-0",
+                  project.imageAspect ?? "aspect-[3/2]",
+                  "w-full object-cover grayscale transition-all duration-[900ms] ease-out group-hover:grayscale-0",
+                  project.imagePosition === "left" && "object-left",
+                  project.imagePosition === "top" && "object-top",
                   zoomed ? "scale-[1.04]" : "scale-100"
                 )}
               />
@@ -87,9 +90,16 @@ function ProjectCard({ project, flip, delay }) {
         </div>
 
         <div className={cn("lg:col-span-5", flip && "lg:order-1")}>
-          <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-            Project {project.index}
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
+              Project {project.index}
+            </p>
+            {project.status && (
+              <span className="border border-primary/40 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.18em] text-primary">
+                {project.status}
+              </span>
+            )}
+          </div>
 
           <h3 className="mt-3 text-balance font-heading text-2xl font-semibold tracking-[-0.02em] md:text-[1.75rem]">
             {project.name}
@@ -139,8 +149,8 @@ export default function Projects() {
         <SectionHeading
           index="03"
           label="Selected Work"
-          title="Projects built end to end — data model, logic, and interface."
-          description="Two applications I've taken from an idea to something that runs. Every link here is a placeholder until the project is published."
+          title="Projects shaped by real needs — from concept to active development."
+          description="Some projects are still in development. Details and links will be updated as they progress."
         />
 
         <div className="mt-10 sm:mt-14">
@@ -163,7 +173,7 @@ export default function Projects() {
 
               <div>
                 <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-                  Slot 03 — in the workshop
+                  Slot 04 — in the workshop
                 </p>
 
                 <h3 className="mt-2 font-heading text-xl font-semibold tracking-[-0.02em]">
@@ -171,7 +181,7 @@ export default function Projects() {
                 </h3>
 
                 <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
-                  I'm currently working on a third project around inventory tracking.
+                  I'm currently working on another project around inventory tracking.
                   This space is reserved for it.
                 </p>
               </div>
