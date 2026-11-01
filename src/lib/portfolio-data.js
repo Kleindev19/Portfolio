@@ -41,9 +41,13 @@ export const SKILL_GROUPS = [
     note: "Interfaces that stay fast and predictable",
     items: [
       { name: "Vue.js", abbr: "Vu" },
+       { name: "React", abbr: "Re" },
       { name: "JavaScript", abbr: "JS" },
       { name: "HTML", abbr: "H5" },
       { name: "CSS", abbr: "C3" },
+      { name: "Bootstrap", abbr: "Bt" },
+      { name: "Tailwind CSS", abbr: "Tw" },
+     
     ],
   },
   {
@@ -53,6 +57,9 @@ export const SKILL_GROUPS = [
     items: [
       { name: "PHP", abbr: "PHP" },
       { name: "Laravel", abbr: "Lv" },
+      { name: "Node.js", abbr: "No" },
+      { name: "Express.js", abbr: "Ex" },
+      { name: "MongoDB", abbr: "Mo" },
       { name: "REST APIs", abbr: "API" },
     ],
   },
@@ -63,6 +70,8 @@ export const SKILL_GROUPS = [
     items: [
       { name: "MySQL", abbr: "My" },
       { name: "SQLite", abbr: "Sq" },
+      { name: "PostgreSQL", abbr: "Pg" },
+      { name: "Supabase", abbr: "Sb" },
     ],
   },
   {
