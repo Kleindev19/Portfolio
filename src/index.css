@@ -167,7 +167,7 @@
 
 @media (max-width: 767px) {
   .skill-track {
-    animation-duration: 72s;
+    animation-duration: 120s;
   }
 }
 
@@ -181,5 +181,22 @@
   *::after {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
+  }
+
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  .skill-carousel-viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+  }
+
+  .skill-track {
+    animation: none !important;
+  }
+
+  .skill-track > [aria-hidden="true"] {
+    display: none;
   }
 }

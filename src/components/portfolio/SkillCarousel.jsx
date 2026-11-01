@@ -48,7 +48,12 @@ export default function SkillCarousel() {
       <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-20 bg-gradient-to-r from-background via-background/70 to-transparent md:w-44" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-20 bg-gradient-to-l from-background via-background/70 to-transparent md:w-44" />
 
-      <div className="overflow-hidden py-6 md:py-12">
+      <div
+        className="skill-carousel-viewport overflow-hidden py-6 md:py-12"
+        role="region"
+        aria-label="Technology stack categories"
+        tabIndex={0}
+      >
         <div className="skill-track flex w-max">
           {[0, 1].map((copy) => (
             <div
