@@ -1,5 +1,5 @@
 
-import profilePortrait from "@/assets/picture.jpg";
+import profilePortrait from "@/assets/photoo.jpg";
 import { PROFILE } from "@/lib/portfolio-data";
 
 export default function ProfilePortrait() {
