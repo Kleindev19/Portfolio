@@ -122,7 +122,7 @@
 
 @layer utilities {
   .text-stroke {
-    -webkit-text-stroke: 1px hsl(var(--foreground) / 0.13);
+    -webkit-text-stroke: 1px hsl(var(--foreground) / 0.2);
     color: transparent;
   }
 

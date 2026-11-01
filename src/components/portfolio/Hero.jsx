@@ -26,9 +26,9 @@ export default function Hero() {
 
       <span
         aria-hidden
-        className="text-stroke pointer-events-none absolute -top-28 left-1/2 -z-10 -translate-x-1/2 select-none whitespace-nowrap font-heading text-[26vw] font-bold leading-none opacity-50"
+        className="text-stroke pointer-events-none absolute -top-28 left-1/2 -z-10 -translate-x-1/2 select-none whitespace-nowrap font-heading text-[26vw] font-bold leading-none opacity-80"
       >
-        MARVIN
+        KLEIN
       </span>
 
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 sm:gap-14 sm:px-6 sm:pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-8 lg:pb-24 xl:gap-16 xl:px-10 xl:pb-28">
