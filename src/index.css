@@ -167,7 +167,7 @@
 
 @media (max-width: 767px) {
   .skill-track {
-    animation-duration: 120s;
+    animation-duration: 90s;
   }
 }
 
@@ -187,6 +187,6 @@
 
 @media (max-width: 767px) and (prefers-reduced-motion: reduce) {
   .skill-track {
-    animation: skill-drift 120s linear infinite !important;
+    animation: skill-drift 90s linear infinite !important;
   }
 }
