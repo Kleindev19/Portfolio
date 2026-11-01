@@ -41,14 +41,7 @@ export default function About() {
               </p>
 
               <p>
-                My interest started with a simple question: how does a screen
-                actually turn into something people can use? That curiosity
-                led me to the stack I work in today — Vue.js on the front end,
-                Laravel and PHP on the back end, and MySQL holding it all
-                together. Most of what I know came from building things end
-                to end rather than watching tutorials: designing the tables,
-                wiring the API, then fixing whatever broke when real data
-                went in.
+               My interest started with a simple question: how does an idea turn into a working application that people can actually use? That curiosity led me to full-stack development and the MERN stack — MongoDB for managing data, Express.js and Node.js for building backend services, and React for creating interactive user interfaces. Most of what I know comes from building projects end to end, from structuring databases and developing APIs to connecting the frontend and troubleshooting problems along the way. I believe the best way to understand software is not just to study how it works, but to build it, break it, and figure out how to make it better.
               </p>
 
               <p>

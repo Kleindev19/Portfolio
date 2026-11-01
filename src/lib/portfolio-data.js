@@ -10,7 +10,7 @@ export const PROFILE = {
   role: "Aspiring Full-Stack Web Developer",
   headline: "Building Digital Experiences Through Code.",
   intro:
-    "I'm a BSIT student from Colegio de Montalban who builds full-stack web applications — from Laravel APIs and MySQL schemas to the Vue interfaces people actually use. I care about readable systems, honest work, and software that solves a real problem.",
+    "I'm a BSIT student from Colegio de Montalban with a passion for building full-stack web applications using the MERN stack. I work across the development process, from designing database structures and building backend APIs with Node.js and Express to creating responsive, user-focused interfaces with React. I value clean code, thoughtful problem-solving, and building practical software that addresses real-world needs.",
   location: "Montalban, Rizal — Philippines",
   availability: "Open to internships & junior roles",
   email: "ortegamarvhenneklein@gmail.com", // placeholder — replace with your email
